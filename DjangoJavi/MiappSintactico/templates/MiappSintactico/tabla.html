@@ -1,0 +1,216 @@
+{% load static %}
+<div class="col text-center">
+  <h1>TABLAS</h1> 
+  <h1>RESULTADO DEL ANALISIS</h1>   
+  <style type="text/css">
+    table, th , td, button {
+    border: 1px solid rgb(226, 90, 12);
+    border-collapse:    
+    }    
+  </style>
+
+</div>
+
+<table class="table table-striped">  
+    <tr>
+      <th scope="col">Media Temperatura</th>         
+      <th scope="col">Media M</th>      
+      <th scope="col">Datos</th>         
+    </tr>
+
+    <tr>    
+    <td>{{mtempera}}</td>
+    <td>{{mcolor}} </td>
+    <td>{{datos}} </td>    
+    </tr>  
+  </div>
+</table>
+  <br>
+  <br>
+  <br>
+</body>  
+
+    <table class="table table-striped">
+        
+            <tr>
+              <th scope="col">Numero de Parte</th>
+              <th scope="col">Temperatura</th>
+              <th scope="col">color</th>
+              <th scope="col">Inflamacion</th>
+            </tr>
+
+            {%for name in tabla%}
+            <tr>
+              <td>{{name.partP}}</td>
+              <td>{{name.temperatura}}</td>
+              <td>{{name.color}}</td>
+              <td>{{name.inflamacion}}</td>              
+            </tr>
+            {% endfor %}
+
+            
+    </table>
+    <br>
+    <br>
+    <br>
+   
+     
+
+    <div class="col text-center">
+    <h1>ANALISIS FINAL</h1>
+    </div>
+    <div class="col text-center">
+  <h1>PROMEDIO POR COLUMNA</h1>
+</div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+         
+          <th scope="col"><h3>Temperatura</h3></th>
+          <th scope="col"><h3>Color</h3> </th>
+          <th scope="col"><h3>Inflamacion</h3></th>
+        </tr>
+      </thead>
+      <tbody>   
+          
+          <tr>
+              <th scope="row">{{protemp}}</th> 
+               <td>{{procolor}}</td>
+               <td>{{proinfla}}</td>
+           
+              </tr>
+        
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <br>
+    <div class="col text-center">
+    <h1>PROMEDIO POR REGISTRO</h1>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Numero de Parte</th>
+          <th scope="col"><h3>Temperatura</h3></th>
+          <th scope="col"><h3>Color</h3> </th>
+          <th scope="col"><h3>Inflamacion</h3></th>
+        </tr>
+      </thead>
+      <tbody>
+  
+        {% for regis in milista %}
+          <tr>
+               <th scope="row">{{regis.milista}}</th>
+               <td>{{regis.temperatura}}</td>
+               <td>{{regis.color}}</td>
+               <td>{{regis.inflamacion}}</td>
+              </tr>
+        
+              {% endfor %}
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <br>
+    
+
+    <div class="col text-center">
+      <h1>DESVIACION ESTANDAR</h1>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col"><h3>Temperatura</h3></th>
+            <th scope="col">Min</th>
+            <th scope="col">Max</th>
+            <th scope="col"><h3>Color</h3> </th>
+            <th scope="col">Min</th>
+            <th scope="col">Max</th>
+            <th scope="col"><h3>Inflamacion</h3></th>
+            <th scope="col">Min</th>
+            <th scope="col">Max</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+            
+            <tr>
+                 <th scope="row">{{stdtemperatura}}</th>
+                 <td>{{minimotem}}</td> 
+                 <td>{{maxt}}</td>
+                 <td>{{stdcolor}}</td>
+                 <td>{{minicolor}}</td> 
+                 <td>{{maxc}}</td>
+                 <td>{{stdinflamacion}}</td>
+                 <td>{{minimoinfla}}</td> 
+                 <td>{{maxi}}</td>
+                </tr>
+           
+        
+        </tbody>
+      </table>
+
+      <br>
+      <br>
+      <br>
+
+      
+    <div class="col text-center">
+      <h1>MODA</h1>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col"><h3>Temperatura</h3></th>
+            <th scope="col"><h3>Color</h3> </th>
+            <th scope="col"><h3>Inflamacion</h3></th>
+          
+          </tr>
+        </thead>
+        <tbody>
+    
+           
+            
+            <tr>
+                 <th scope="row">{{modatem}}</th>
+                 <td>{{modacolor}}</td> 
+                 <td>{{modainfla}}</td>
+            
+                </tr>
+           
+        
+        </tbody>
+      </table>  
+
+      <br>
+      <br>
+      <br>  
+
+    <div class="col text-center">
+
+      <div class="col text-center">
+        <form action="{% url 'grafo' %}">
+          <div>
+             <button class ="btn btn-danger", type ="submit"> >>> VER GRAFO <<< </button>
+          </div>
+        </form>
+    </div> 
+
+      <form action="{% url 'cancer' %}">
+        <div>
+         <button class ="btn btn-danger", type ="submit">REGRESAR <<<<<< </button>
+        </div>
+      </form>
+
+    </div>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+    

@@ -1,0 +1,140 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>Sintactico Estructural Final</title>
+<meta name="description" content="Thoughts, reviews and ideas since 1999."/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="shortcut icon" href="#">
+<link rel="stylesheet" type="text/css" href="{% static 'MiappSintactico/css/screen.css' %}"/>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,400italic,700,700italic|Playfair+Display:400,700,400italic,700italic"/>
+</head>
+
+<body class="home-template">
+<div class="site-wrapper">
+	<nav class="main-nav overlay clearfix">
+	<a class="blog-logo" href="https://www.uaemex.mx"><img src="{% static 'MiappSintactico/img/logo.png' %}" alt="Fashion Critiques"/></a>
+	<ul id="menu">
+		<li class="nav-home nav-current" role="presentation"><a href= "{% url 'home' %}">INICIO</a></li>
+		<li class="nav-article-example" role="presentation"><a href="{% url 'cancer' %}">¿QUE ES EL CANCER?</a></li>
+		<li class="nav-about-us" role="presentation"><a href="{% url 'tabla' %}">ESTADISTICA</a></li>
+		<li class="nav-author-page" role="presentation"><a href="{% url 'grafo' %}">GRAFO</a></li>
+		<span class="socialheader">
+		<a href="#"><span class='symbol'>circletwitterbird</span></a>
+		<a href="#"><span class='symbol'>circlefacebook</span></a>
+		<a href="#"><span class='symbol'>circlegoogleplus</span></a>
+		<a href="mailto:wowthemesnet@gmail.com"><span class='symbol'>circleemail</span></a>
+		</span>
+	</ul>
+	</nav>
+	<header class="main-header " style="background-image: url(/static/MiappSintactico/img/intro.jpg)">
+	<div class="vertical">
+		<div class="main-header-content inner">
+			<h1 class="page-title">Cancer de Mama</h1>
+			<div class="entry-title-divider">
+				<span></span><span></span><span></span>
+			</div>
+			<h2 class="page-description">Una Pelea para Sobrevivir</h2>
+		</div>
+	</div>
+
+	<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+	</header>
+	<main id="content" class="content" role="main">
+		
+		<h3><b><center>El cáncer de mama es un tipo de cáncer que se forma en las células de las mamas.</center></b><br>
+
+			Después del cáncer de piel, el cáncer de mama es el tipo más común diagnosticado en mujeres en Estados Unidos.  El cáncer de mama se puede producir tanto en hombres como en mujeres; sin embargo, es mucho más común en las mujeres.
+			
+			El considerable apoyo para la concientización y el financiamiento de investigaciones sobre cáncer de mama ha ayudado a crear avances en el diagnóstico y tratamiento del cáncer de mama.<br> Las tasas de supervivencia del cáncer de mama han aumentado, y el número de muertes asociadas con esta enfermedad está disminuyendo constantemente, en gran medida debido a factores como la detección temprana, un nuevo enfoque de tratamiento personalizado y un mejor entendimiento de la enfermedad.</h3>
+	<div class="wraps">
+
+		<img src="{% static 'MiappSintactico/img/shadow.png' %}" class="wrapshadow">
+		<div class="grid">
+			<div class="grid-item">
+				<article class="post">
+				<div class="wrapgriditem">
+					<header class="post-header">
+					<h2 class="post-title"><a href="article.html">Propon &amp; Reto</a></h2>
+					</header>
+					<section class="post-excerpt">
+					<p>
+						TOCATE ¡¡ Este miedo puede tomar muchas formas diferentes, y eso depende de la actitud que tomes ante a la enfermedad. <a class="read-more" href="/retro-is-the-new-modern/">&raquo;</a>
+					</p>
+					</section>
+					<footer class="post-meta">
+					<img class="author-thumb" src="{% static 'MiappSintactico/img/gravatar.jpg' %}" alt="David" nopin="nopin"/>
+					<a href="author.html">David</a>
+					<time class="post-date" datetime="2016-12-18">Diciembre 2020</time>
+					</footer>
+				</div>
+				</article>
+			</div>
+			<div class="grid-item">
+				<article class="post tag-romance">
+				<a href="article.html"><img src="http://s3.amazonaws.com/caymandemo/wp-content/uploads/sites/10/2015/09/10175658/j2-520x780-520x600.jpg"></a>
+				<div class="wrapgriditem">
+					<header class="post-header">
+					<h2 class="post-title"><a href="article.html">Explora tu cuerpo</a></h2>
+					</header>
+					<section class="post-excerpt">
+					<p>
+						Un bulto o engrosamiento en la mama que se siente diferente del tejido que la rodea. <a class="read-more" href="article.html">&raquo;</a>
+					</p>
+					</section>
+					<footer class="post-meta">
+					<img class="author-thumb" src="{% static 'MiappSintactico/img/gravatar.jpg' %}" alt="David" nopin="nopin"/>
+					<a href="author.html">Javier Campos </a>
+					<a href="#">UAEM</a>
+					<time class="post-date" datetime="2016-12-18">21 de enero del 2021</time>
+					</footer>
+				</div>
+				</article>
+			</div>
+			<div class="grid-item">
+				<article class="post">
+				<div class="wrapgriditem">
+					<header class="post-header">
+					<h2 class="post-title"><a href="article.html">No tengas miedo ¡¡</a></h2>
+					</header>
+					<section class="post-excerpt">
+					<p>
+						Enrojecimiento o pequeños orificios en la piel que se encuentra sobre tu mama, como la piel de una naranja. <a class="read-more" href="/winter-collection/">&raquo;</a>
+					</p>
+					</section>
+					<footer class="post-meta">
+					<img class="author-thumb" src="{% static 'MiappSintactico/img/gravatar.jpg' %}" alt="David" nopin="nopin"/>
+					<a href="author.html">Mayo Clinic</a>
+					<time class="post-date" datetime="2016-12-18">Mayo 2020</time>
+					</footer>
+				</div>
+				</article>
+			</div>
+			
+		<nav class="pagination" role="navigation">
+		<span class="page-number">Page 1 of 2</span>
+		<a class="older-posts" href="cancer.html">Mas Informacion &rarr;</a>
+		</nav>
+	
+
+	</div>
+	</main>
+	<footer class="site-footer clearfix">
+	<a href="#top" id="back-to-top" class="back-top"></a>
+	<div class="text-center">
+		<a href="index.html">PROYECTO FINAL</a> &copy; 2021<br/>
+		Profesor: <a href="https://www.uaemex.mx/">Efren Gonzalez Gomez</a>
+	</div>
+	</footer>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="{% static 'MiappSintactico/js/masonry.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'MiappSintactico/js/jquery.fitvids.js' %}"></script>
+<script type="text/javascript" src="{% static 'MiappSintactico/js/index.js' %}"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

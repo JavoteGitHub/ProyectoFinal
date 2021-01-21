@@ -1,0 +1,160 @@
+{% load static %}
+author 
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>Cancer de Mama</title>
+	<meta name="description" content="Thoughts, reviews and ideas since 1999."/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="shortcut icon" href="#">
+	<link rel="stylesheet" type="text/css" href="{% static 'MiappSintactico/css/screen.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,400italic,700,700italic|Playfair+Display:400,700,400italic,700italic"/>
+	</head>
+<body class="post-template">
+	<div class="site-wrapper">
+		<nav class="main-nav overlay clearfix">
+		<a class="blog-logo" href="https://www.uaemex.mx"><img src="{% static 'MiappSintactico/img/logo.png' %}" alt="UNIVERSIDAD AUTONOMA DEL ESTADO DE MEXICO"/></a>
+			<ul id="menu">
+			<li class="nav-home nav-current" role="presentation"><a href= "{% url 'home' %}">INICIO</a></li>
+			<li class="nav-article-example" role="presentation"><a href="{% url 'cancer' %}">¿QUE ES EL CANCER?</a></li>
+			<li class="nav-about-us" role="presentation"><a href="{% url 'tabla' %}">ESTADISTICA</a></li>
+			<li class="nav-author-page" role="presentation"><a href="{% url 'grafo' %}">GRAFO</a></li>
+				<span class="socialheader">
+				<a href="#"><span class='symbol'>circletwitterbird</span></a>
+				<a href="#"><span class='symbol'>circlefacebook</span></a>
+				<a href="#"><span class='symbol'>circlegoogleplus</span></a>
+				<a href="mailto:wowthemesnet@gmail.com"><span class='symbol'>circleemail</span></a>
+				</span>
+			</ul>
+		</nav>
+			<header class="main-header post-head " style="background-image: url(/static/MiappSintactico/img/random.jpg)">
+				<div class="vertical">
+					<div class="main-header-content inner">
+					<h1 class="post-title">El cancer es :</h1>
+						<div class="entry-title-divider">
+						<span></span><span></span><span></span>
+						</div>
+					<section class="post-meta">
+					<time class="post-date" datetime="2015-12-13">Octubre </time> | <a class="scrolltocomments" href="#disqus_thread">Mes del Cancer</a>
+					</section>
+					</div>
+				</div>
+			</header>
+			<main id="content" class="content" role="main">
+				<div class="wraps">
+				<img src="{% static 'MiappSintactico/img/shadow.png' %}" class="wrapshadow">
+				<article class="post featured">
+				<section class="post-content">
+		
+		
+		
+        		<table class="table table-striped">
+            		<thead>
+              		<tr>
+                	<th scope="col">Numero de Parte</th>
+                	<th scope="col">Temperatura</th>
+                	<th scope="col">Coloracion</th>
+                	<th scope="col">Inflamacion</th>
+              		</tr>
+            		</thead>
+            <tbody>
+
+				 
+		{% for registros in tabla %}
+		
+			<tr>
+		    	<th scope="row">{{registros.partP}}</th>
+			 	<td>{{registros.temperatura}}</td>
+			 	<td>{{registros.color}}</td>
+			 	<td>{{registros.inflamacion}}</td>
+			</tr>
+
+		{% endfor %}
+		</tbody>			
+		</table>
+
+<div class="col text-center">
+
+	<form action="{% url 'tabla' %}">
+	  <div>
+	   <button class ="btn btn-danger", type ="submit">ANALIZAR BASE DE DATOS</button>
+	  </div>
+	</form>
+
+  </div>
+
+</div>
+    </main>	  	  
+	
+	
+		</section>
+		<footer class="post-footer">
+		<figure class="author-image">
+		<a class="img" href="https://www.uaemex.mx/" style="background-image: url(static/MiappSintactico/img/gravatar.jpg"><span class="hidden">UNIVERSIDAD AUTONOMA DEL ESTADO DE MEXICO</span></a>
+		</figure>
+		<section class="author">
+		
+		<h3><b><center>EL CANCER ES :</center></b><br>
+			<h3><b>El cáncer de mama es el crecimiento descontrolado de las células mamarias.&#x27;Para entender mejor el cáncer de mama, debemos entender cómo se desarrolla cualquier cáncer. <br><br>
+				El cáncer es el resultado de mutaciones, o cambios anómalos, en los genes que regulan el crecimiento de las células y las mantienen sanas. <br><br>Los genes se encuentran en el núcleo de las células, el cual  actúa como la "sala de control" de cada célula. <br><br> las células del cuerpo se renuevan mediante un proceso específico llamado crecimiento celular: las células nuevas y sanas ocupan el lugar de las células viejas que mueren. Pero con el paso del tiempo, las mutaciones pueden "activar" ciertos genes y "desactivar" otros en una célula. La célula modificada adquiere la capacidad de dividirse sin ningún tipo de control u orden, por lo que produce más células iguales y genera un tumor.
+	
+				<br><br>Un tumor puede ser benigno (no es peligroso para la salud) o maligno (es potencialmente peligroso). Los tumores benignos no son considerados cancerosos: sus células tienen una apariencia casi normal, crecen lentamente y no invaden tejidos próximos ni se propagan hacia otras partes del cuerpo. Los tumores malignos son cancerosos. De no ser controladas, las células malignas pueden propagarse más allá del tumor original hacia otras partes del cuerpo.</b><br>
+		
+		<div class="author-meta">
+			<span class="author-location icon-location">Mas Informacion: </span>
+			<span class="author-link icon-link"><a href="https://www.breastcancer.org/es/sintomas/cancer_de_mama/que_es_cancer_mama?gclid=Cj0KCQiA88X_BRDUARIsACVMYD8N-NyUZX88rqxlgYqcxwCze6jCKfzfH4xqLncJKY7hhMDXA37LAn8aAhjNEALw_wcB">Breastcancer.org</a></span>
+		</div>
+		</section>
+		
+		</footer>
+		<div id="disqus_thread">
+		</div>
+		<script>
+			(function() { // NO EDITAR ESTAS LINEAS 
+			var d = document, s = d.createElement('script');
+			s.src = 'https://wowthemesdemo.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+		</article>
+	
+	<div class="clearfix">
+	</div>
+	<aside class="read-next">
+	<a class="read-next-story " style= "background-image: url(http://s3.amazonaws.com/caymandemo/wp-content/uploads/sites/10/2015/09/10175658/j6-520x779-520x600.jpg)" href="article.html">
+	<section class="post">
+	<h2>The first journey in my life</h2>
+	<p>
+		I had accompanied Ashok on several occasions earlier to the glass shop and watched as he ordered glass explaining&hellip;
+	</p>
+	</section>
+	</a>
+	<a class="read-next-story prev " style="background-image: url(http://s3.amazonaws.com/caymandemo/wp-content/uploads/sites/10/2015/09/10175658/j7-520x780-520x600.jpg)" href="article.html">
+	<section class="post">
+	<h2>Few days at his shop</h2>
+	<p>
+		Ashok’s shop is not very large. It is a two-roomed shop on the ground floor of the Gomes&hellip;
+	</p>
+	</section>
+	</a>
+	</aside>
+	<footer class="site-footer clearfix">
+		<a href="#top" id="back-to-top" class="back-top"></a>
+		<div class="text-center">
+			<a href="index.html">PROYECTO FINAL</a> &copy; 2021<br/>
+			Profesor: <a href="https://www.uaemex.mx/">Efren Gonzalez Gomez</a>
+		</div>
+		</footer>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="{% static 'MiappSintactico/js/masonry.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'MiappSintactico/js/jquery.fitvids.js'%}"></script>
+<script type="text/javascript" src="{% static 'MiappSintactico/js/index.js' %}"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
